@@ -3,4 +3,25 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <value>
+                /test=flowController
+            </value>
+        </property>
+        <property name="defaultHandler">
+            <bean class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+        </property>
+    </bean>
+
+    <bean id="flowController" class="org.springframework.webflow.mvc.servlet.FlowController">
+        <property name="flowExecutor" ref="flowExecutor"/>
+    </bean>
+
+    <bean id="faceletsViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass" value="org.springframework.faces.mvc.JsfView"/>
+        <property name="prefix" value="/WEB-INF/views/"/>
+        <property name="suffix" value=".xhtml"/>
+    </bean>
+
 </beans>

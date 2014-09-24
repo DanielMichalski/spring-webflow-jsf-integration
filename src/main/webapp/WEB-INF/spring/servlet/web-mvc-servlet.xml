@@ -6,16 +6,12 @@
     <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <value>
-                /test=flowController
+                /main-flow=flowController
             </value>
         </property>
         <property name="defaultHandler">
             <bean class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
         </property>
-    </bean>
-
-    <bean id="flowController" class="org.springframework.webflow.mvc.servlet.FlowController">
-        <property name="flowExecutor" ref="flowExecutor"/>
     </bean>
 
     <bean id="faceletsViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">

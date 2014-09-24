@@ -25,4 +25,8 @@
 
     <faces:flow-builder-services id="facesFlowBuilderServices"/>
 
+    <bean id="flowController" class="org.springframework.webflow.mvc.servlet.FlowController">
+        <property name="flowExecutor" ref="flowExecutor"/>
+    </bean>
+
 </beans>

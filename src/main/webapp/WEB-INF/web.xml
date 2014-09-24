@@ -59,6 +59,9 @@
         <url-pattern>/resources/*</url-pattern>
     </servlet-mapping>
 
+    <!--
+        Dispather Servlet
+    -->
     <servlet>
         <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -66,9 +69,8 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>/WEB-INF/spring/servlet/web-mvc-servlet.xml</param-value>
         </init-param>
-        <load-on-startup>2</load-on-startup>
+        <load-on-startup>1</load-on-startup>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
         <url-pattern>/spring/*</url-pattern>
@@ -79,7 +81,6 @@
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.faces</url-pattern>

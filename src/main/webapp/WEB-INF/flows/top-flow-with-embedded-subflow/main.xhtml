@@ -1,0 +1,30 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	    		xmlns:ui="http://java.sun.com/jsf/facelets"
+	  			xmlns:h="http://java.sun.com/jsf/html"
+	  			xmlns:f="http://java.sun.com/jsf/core"
+	  			xmlns:p="http://primefaces.org/ui"
+				template="/WEB-INF/layouts/standard.xhtml">
+
+<ui:define name="notes">
+	<p>
+		Some notes about new project
+	</p>
+	<hr/>
+</ui:define>
+
+<ui:define name="content">
+	<h:form id="mainForm">
+		<div class="span-1"><p> </p></div>
+		<div class="span-4 colborder">
+			<h4>Create a new project</h4>
+		</div>
+		<div class="span-16">
+			<p:commandButton value="Exit" action="exit" immediate="true" />
+			<p:commandButton value="Launch" action="launch" update="mainForm"/>&nbsp;
+		</div>
+		<div class="span-1"><p> </p></div>
+	</h:form>
+</ui:define>
+
+</ui:composition>

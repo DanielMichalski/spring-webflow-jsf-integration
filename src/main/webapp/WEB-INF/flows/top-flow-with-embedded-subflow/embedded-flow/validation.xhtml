@@ -1,0 +1,36 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	    		xmlns:ui="http://java.sun.com/jsf/facelets"
+	  			xmlns:h="http://java.sun.com/jsf/html"
+	  			xmlns:f="http://java.sun.com/jsf/core"
+	  			xmlns:p="http://primefaces.org/ui"
+				template="/WEB-INF/layouts/standard.xhtml">
+
+<ui:define name="content">
+	<h:form id="mainForm">
+		<div class="span-1"><p> </p></div>
+		<div class="span-4 colborder">
+			<ul>
+				<li>Configuration</li>
+				<li>step1</li>
+				<li>step2</li>
+				<li>step3</li>
+				<li><h6>Validation</h6></li>
+			</ul>
+		</div>
+		<div class="span-16">
+			<div class="span-22">
+				<p:commandButton value="Exit" action="exit" immediate="true"/>
+				<p:commandButton value="Previous" action="previous" update="mainForm"/>
+				<p:commandButton value="Finish" action="finish" update="mainForm" style="background-color:green;"/>
+			</div>
+			<br />
+			<div class="span-22">
+				<p>Validate</p>
+			</div>
+		</div>
+		<div class="span-1"><p> </p></div>
+	</h:form>	
+</ui:define>
+
+</ui:composition>

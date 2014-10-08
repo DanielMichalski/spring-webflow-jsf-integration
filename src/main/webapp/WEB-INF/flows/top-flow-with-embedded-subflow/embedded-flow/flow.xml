@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow.xsd"
+	parent="parent-flow">
+
+	<!--
+		Also see ../parent-flow.xml. 
+	-->
+
+	<view-state id="main">
+		<transition on="previous" to="main" />
+		<transition on="next" to="step1"/>
+	</view-state>
+
+	<view-state id="step1">
+		<transition on="previous" to="main"/>
+		<transition on="next" to="step2"/>
+	</view-state>
+
+	<view-state id="step2">
+		<transition on="previous" to="step1"/>
+		<transition on="next" to="step3"/>
+	</view-state>
+
+	<view-state id="step3">
+		<transition on="previous" to="step2"/>
+		<transition on="next" to="validation"/>
+	</view-state>
+
+	<view-state id="validation">
+		<transition on="previous" to="step3"/>
+		<transition on="finish" to="end"/>
+	</view-state>
+
+</flow>

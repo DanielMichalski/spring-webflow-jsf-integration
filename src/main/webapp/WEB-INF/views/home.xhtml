@@ -1,0 +1,72 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/layouts/standard.xhtml">
+	
+<ui:define name="notes">
+
+</ui:define>
+
+<ui:define name="content">
+	<p:tabView activeIndex="${param.tab}">
+		<p:tab title="TO DO">
+			
+		</p:tab>
+
+		<p:tab title="Project list">
+
+			<h:outputLink value="top-flow-with-embedded-subflow?tab=0" >
+				<h2><h:outputText value="New Project" /></h2>
+			</h:outputLink><br/>
+			<p><hr/></p>
+			<table>
+				<tr>
+					<td>
+						<li><h5>Project 1</h5></li>
+					</td>
+					<td rowspan="2">
+						<h:outputLink value="" >
+							<h:outputText value="Modification" />
+						</h:outputLink><br/>
+						<h:outputLink value="#?tab=0" >
+							<h:outputText value="Delete" />
+						</h:outputLink><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="alt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </span>
+					</td>
+				</tr>
+				<tr><td colspan="2"><hr/></td></tr>
+				<tr>
+					<td>
+						<li><h5>Project 2</h5></li>
+					</td>
+					<td rowspan="2">
+						<h:outputLink value="#" >
+							<h:outputText value="Modification" />
+						</h:outputLink><br/>
+						<h:outputLink value="#" >
+							<h:outputText value="Delete" />
+						</h:outputLink><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="alt">Possible description</span> 
+					</td>
+				</tr>
+			</table>
+		</p:tab>
+	</p:tabView>
+
+</ui:define>
+</ui:composition>

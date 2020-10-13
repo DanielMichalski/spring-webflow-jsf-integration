@@ -148,7 +148,7 @@
         <repository>
             <id>springsource</id>
             <name>SpringSource Repository</name>
-            <url>http://repo.springsource.org/milestone</url>
+            <url>https://repo.springsource.org/milestone</url>
             <releases><enabled>true</enabled></releases>
             <snapshots><enabled>true</enabled></snapshots>
         </repository>

@@ -12,7 +12,7 @@
     <properties>
         <java-version>1.6</java-version>
         <springwebflow-version>2.4.0.RC1</springwebflow-version>
-        <spring-framework-version>4.0.3.RELEASE</spring-framework-version>
+        <spring-framework-version>4.3.30.RELEASE</spring-framework-version>
         <springsecurity-version>3.2.0.RELEASE</springsecurity-version>
         <org.slf4j-version>1.6.1</org.slf4j-version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
